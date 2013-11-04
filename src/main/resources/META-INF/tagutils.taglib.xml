@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facelet-taglib
+		xmlns="http://java.sun.com/xml/ns/javaee"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/web-facelettaglibrary_2_0.xsd"
+		version="2.0">
+	<namespace>http://jsf.tagutils.org/taglib</namespace>
+  <!-- tgu:compositeComponent --> 
+	<tag>
+			<tag-name>compositeComponent</tag-name>
+			<handler-class>org.jsf.facelets.tagutils.CompositeComponentHandler</handler-class>
+	</tag>
+
+	<!-- tgu:eval -->
+	<tag>
+			<description>Evaluates expression in the tag handler</description>
+			<tag-name>eval</tag-name>
+			<handler-class>org.jsf.facelets.tagutils.EvalHandler</handler-class>
+			<attribute>
+					<description></description>
+					<name>expression</name>
+					<required>true</required>
+					<type>javax.el.ValueExpression</type>
+			</attribute>
+	</tag>
+
+	<!-- tgu:ifExist -->
+	<tag>
+			<tag-name>ifExist</tag-name>
+			<handler-class>org.jsf.facelets.tagutils.IfExistHandler</handler-class>
+			<attribute>
+					<description></description>
+					<name>value</name>
+					<required>false</required>
+					<type>java.lang.String</type>
+			</attribute>
+	</tag>
+
+	<!-- tgu:implementation -->
+	<tag>
+			<tag-name>implementation</tag-name>
+			<handler-class>org.jsf.facelets.tagutils.CompositeImplementationHandler</handler-class>
+	</tag>
+
+	<!-- tgu:interface -->
+	<tag>
+			<tag-name>interface</tag-name>
+			<handler-class>org.jsf.facelets.tagutils.CompositeInterfaceHandler</handler-class>
+	</tag>
+
+<!-- tgu:setVarValue -->
+	<tag>
+			<description>Set evaluates value of value expression and assigns it immediately to the appropriate variable</description>
+			<tag-name>setVarValue</tag-name>
+			<handler-class>org.jsf.facelets.tagutils.SetVarValueHandler</handler-class>
+			<attribute>
+					<description></description>
+					<name>var</name>
+					<required>true</required>
+					<type>java.lang.String</type>
+			</attribute>
+			<attribute>
+					<description></description>
+					<name>value</name>
+					<required>true</required>
+					<type>java.lang.String</type>
+			</attribute>
+	</tag>
+
+	<!-- tgu:tagParam -->
+	<tag>
+			<tag-name>tagParam</tag-name>
+			<handler-class>org.jsf.facelets.tagutils.CompositeTagParamHandler</handler-class>
+			<attribute>
+					<description></description>
+					<name>name</name>
+					<required>false</required>
+					<type>java.lang.String</type>
+			</attribute>
+			<attribute>
+					<description></description>
+					<name>required</name>
+					<required>false</required>
+					<type>java.lang.String</type>
+			</attribute>
+			<attribute>
+					<description></description>
+					<name>propagate</name>
+					<required>false</required>
+					<type>java.lang.String</type>
+			</attribute>
+			<attribute>
+					<description></description>
+					<name>default</name>
+					<required>false</required>
+					<type>java.lang.String</type>
+			</attribute>
+			<attribute>
+					<description></description>
+					<name>deprecated</name>
+					<required>false</required>
+					<type>java.lang.String</type>
+			</attribute>
+			<attribute>
+					<description></description>
+					<name>isMethodParam</name>
+					<required>false</required>
+					<type>java.lang.String</type>
+			</attribute>
+	</tag>
+
+</facelet-taglib>
