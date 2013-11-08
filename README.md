@@ -1,20 +1,21 @@
 jsf-taglib-utils
 ================
 
-Set of jsf facelets tag handlers to simplify tag component declaration/definition. 
+Is set of jsf facelets tag handlers to make the life with JSF easier.
 
-Handlers supporting tag declaration/definition:
+1. Handlers supporting tag declaration/definition:
 
-  tgu:compositeComponent
-  tgu:interface
-  tgu:tagParam
-  tgu:implementation
+<ul>
+  <li>&lt;tgu:compositeComponent&gt;</li>
+  <li>&lt;tgu:interface&gt;</li>
+  <li>&lt;tgu:tagParam&gt;</li>
+  <li>&lt;tgu:implementation&gt;</li>
+</ul>
 
-Other handlers:
-  tgu:ifExist
-  tgu:eval
-  tgu:setVar
-
+The tag definition is similar to composite component but is done in plain facelet tag. Tag file consists 
+of tag's parameters declaration and tag body definition. Attributes are mapped to the attribute variables 
+adding  "__"  prefix to attribute name. This mapping guarantee that no attribute name from parent var mappers 
+are propagated to child component.
 
 Example : <p:commandLink> wrapper :
 
@@ -61,3 +62,10 @@ Example : <p:commandLink> wrapper :
 &lt;/ui:composition&gt;
 
 </code></pre>
+
+2.Other handlers:
+  tgu:ifExist
+  tgu:eval
+  tgu:setVar
+
+
