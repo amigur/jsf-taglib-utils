@@ -20,44 +20,44 @@ Example : <p:commandLink> wrapper :
 
 <pre><code>
 
-<ui:composition>
-  <tgu:compositeComponent>
-    <tgu:interface>
-      <tgu:tagParam name="action" isMethodParam="true"/>
-      <tgu:tagParam name="actionListener"/>
-      <tgu:tagParam name="id" required="true"/>
-      <tgu:tagParam name="event"/>
-      <tgu:tagParam name="update"/>
-      <tgu:tagParam name="rendered" default="true"/>
-      <tgu:tagParam name="style"/>
-      <tgu:tagParam name="value"/>
-    </tgu:interface>
+&lt;ui:composition&gt;
+  &lt;tgu:compositeComponent&gt;
+    &lt;tgu:interface&gt;
+      &lt;tgu:tagParam name="action" isMethodParam="true"/&gt;
+      &lt;tgu:tagParam name="actionListener"/&gt;
+      &lt;tgu:tagParam name="id" required="true"/&gt;
+      &lt;tgu:tagParam name="event"/&gt;
+      &lt;tgu:tagParam name="update"/&gt;
+      &lt;tgu:tagParam name="rendered" default="true"/&gt;
+      &lt;tgu:tagParam name="style"/&gt;
+      &lt;tgu:tagParam name="value"/&gt;
+    &lt;/tgu:interface&gt;
 
-    <tgu:implementation>
+    &lt;tgu:implementation&gt;
 
-      <p:commandLink  id="#{__id}"
+      &lt;p:commandLink  id="#{__id}"
                  action="#{:invokeTagMethodExpression(__action)}"
                  update="#{__update}"
                  rendered="#{__rendered}"
                  style="#{__style}"
-                 value="#{__value}">
+                 value="#{__value}"&gt;
         
-        <tgu:ifExist value="__event">
-          <f:attribute name="event" value="#{__event}"/>
-        </tgu:ifExist>
+        &lt;tgu:ifExist value="__event"&gt;
+          &lt;f:attribute name="event" value="#{__event}"/&gt;
+        &lt;/tgu:ifExist&gt;
       
-        <tgu:ifExist value="__actionListener">
-          <f:attribute name="actionListener" value="#{__actionListener}"/>
-        </tgu:ifExist>
+        &lt;tgu:ifExist value="__actionListener"&gt;
+          &lt;f:attribute name="actionListener" value="#{__actionListener}"/&gt;
+        &lt;/tgu:ifExist&gt;
 
-        <ui:insert/>
+        &lt;ui:insert/&gt;
 
-      </p:commandLink>
+      &lt;/p:commandLink&gt;
 
-    </tgu:implementation>
+    &lt;/tgu:implementation&gt;
 
-  </tgu:compositeComponent>
+  &lt;/tgu:compositeComponent&gt;
 
-</ui:composition>
+&lt;/ui:composition&gt;
 
 </code></pre>
