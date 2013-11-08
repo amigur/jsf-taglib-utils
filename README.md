@@ -18,6 +18,7 @@ Other handlers:
 
 Example : <p:commandLink> wrapper :
 
+<pre><code>
 
 <ui:composition>
   <tgu:compositeComponent>
@@ -58,3 +59,5 @@ Example : <p:commandLink> wrapper :
   </tgu:compositeComponent>
 
 </ui:composition>
+
+</code></pre>
