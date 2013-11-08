@@ -64,8 +64,8 @@ Example : <p:commandLink> wrapper :
 </code></pre>
 
 2.Other handlers:
-  tgu:ifExist
-  tgu:eval
-  tgu:setVar
-
-
+<ul>
+  <li>&lt;tgu:ifExist&gt;</li>
+  <li>&lt;tgu:eval&gt;</li>
+  <li>&lt;tgu:setVar&gt;</li>
+</ul>
