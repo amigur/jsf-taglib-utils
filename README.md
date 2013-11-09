@@ -6,16 +6,16 @@ Is set of jsf facelets tag handlers to make the life with JSF easier.
 1. Handlers supporting tag declaration/definition:
 
 <ul>
-  <li>&lt;tgu:compositeComponent&gt;</li>
-  <li>&lt;tgu:interface&gt;</li>
-  <li>&lt;tgu:tagParam&gt;</li>
-  <li>&lt;tgu:implementation&gt;</li>
+  <li><b>&lt;tgu:compositeComponent&gt;</b></li>
+  <li><b>&lt;tgu:interface&gt;</b></li>
+  <li><b>&lt;tgu:tagParam&gt;</b></li>
+  <li><b>&lt;tgu:implementation&gt;</b></li>
 </ul>
 
 The tag definition is similar to composite component but is done in plain facelet tag. Tag file consists 
 of tag's parameters declaration and tag body definition. Attributes are mapped to the attribute variables 
-adding  "__"  prefix to attribute name. This mapping guarantee that no attribute name from parent var mappers 
-are propagated to child component.
+adding  "__"  prefix to attribute name. This mapping guarantees that no attribute name from parent var mappers 
+are propagated to child component by the &lt;ui:insert&gt; tag.
 
 Example : <p:commandLink> wrapper :
 
@@ -65,7 +65,7 @@ Example : <p:commandLink> wrapper :
 
 2.Other handlers:
 <ul>
-  <li>&lt;tgu:ifExist&gt;</li>
-  <li>&lt;tgu:eval&gt;</li>
-  <li>&lt;tgu:setVar&gt;</li>
+  <li><b>&lt;tgu:ifExist&gt;</b></li>
+  <li><b>&lt;tgu:eval&gt;</b></li>
+  <li><b>&lt;tgu:setVar&gt;</b></li>
 </ul>
