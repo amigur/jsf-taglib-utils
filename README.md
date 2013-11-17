@@ -16,11 +16,8 @@ The tag definition is similar to composite component but is done in plain facele
 of tag's parameters declaration and tag body definition. Attributes are mapped to the attribute variables 
 adding  "__"  prefix to attribute name. This mapping guarantees that no attribute name from parent var mappers 
 are propagated to child component by the &lt;ui:insert&gt; tag.
-
-Example : <p:commandLink> wrapper :
-
+Example : &lt;p:commandLink&gt; wrapper :
 <pre><code>
-
 &lt;ui:composition&gt;
   &lt;tgu:compositeComponent&gt;
     &lt;tgu:interface&gt;
