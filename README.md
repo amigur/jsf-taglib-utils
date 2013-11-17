@@ -52,7 +52,7 @@ Example : &lt;p:commandLink&gt; wrapper :
 
 2.Other handlers:
 <ul>
-  <li><b>&lt;tgu:ifExist&gt;</b></li>
-  <li><b>&lt;tgu:eval&gt;</b></li>
+  <li><b>&lt;tgu:ifExist var="xyz"&gt;</b></li> checks if variable is defined. It is similar to &lt;c:if test="#{!empty xyz}&gt; that checks the emptiness of varyable "xyz".
+  <li><b>&lt;tgu:eval&gt; expression="#{value_expression}"</b></li> Evaluates specified value expression.
   <li><b>&lt;tgu:setVar&gt;</b></li>
 </ul>
