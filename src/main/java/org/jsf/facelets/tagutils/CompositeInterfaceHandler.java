@@ -9,7 +9,7 @@ import javax.faces.view.facelets.TagConfig;
 import com.sun.faces.facelets.tag.TagHandlerImpl;
 
 /**
- * The Class CompositeInterfaceHandler. <tgu:interface>
+ * The Class CompositeInterfaceHandler. <tx:interface>
  */
 public class CompositeInterfaceHandler extends TagHandlerImpl
 {
