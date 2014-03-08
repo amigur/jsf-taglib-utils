@@ -5,13 +5,13 @@
 		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/web-facelettaglibrary_2_0.xsd"
 		version="2.0">
 	<namespace>http://jsf.tagutils.org/taglib</namespace>
-  <!-- tgu:compositeComponent --> 
+	<!-- tx:compositeComponent --> 
 	<tag>
 			<tag-name>compositeComponent</tag-name>
 			<handler-class>org.jsf.facelets.tagutils.CompositeComponentHandler</handler-class>
 	</tag>
 
-	<!-- tgu:eval -->
+	<!-- tx:eval -->
 	<tag>
 			<description>Evaluates expression in the tag handler</description>
 			<tag-name>eval</tag-name>
@@ -24,7 +24,7 @@
 			</attribute>
 	</tag>
 
-	<!-- tgu:ifExist -->
+	<!-- tx:ifExist -->
 	<tag>
 			<tag-name>ifExist</tag-name>
 			<handler-class>org.jsf.facelets.tagutils.IfExistHandler</handler-class>
@@ -36,19 +36,19 @@
 			</attribute>
 	</tag>
 
-	<!-- tgu:implementation -->
+	<!-- tx:implementation -->
 	<tag>
 			<tag-name>implementation</tag-name>
 			<handler-class>org.jsf.facelets.tagutils.CompositeImplementationHandler</handler-class>
 	</tag>
 
-	<!-- tgu:interface -->
+	<!-- tx:interface -->
 	<tag>
 			<tag-name>interface</tag-name>
 			<handler-class>org.jsf.facelets.tagutils.CompositeInterfaceHandler</handler-class>
 	</tag>
 
-<!-- tgu:setVarValue -->
+	<!-- tx:setVarValue -->
 	<tag>
 			<description>Set evaluates value of value expression and assigns it immediately to the appropriate variable</description>
 			<tag-name>setVarValue</tag-name>
@@ -67,7 +67,7 @@
 			</attribute>
 	</tag>
 
-	<!-- tgu:tagParam -->
+	<!-- tx:tagParam -->
 	<tag>
 			<tag-name>tagParam</tag-name>
 			<handler-class>org.jsf.facelets.tagutils.CompositeTagParamHandler</handler-class>
