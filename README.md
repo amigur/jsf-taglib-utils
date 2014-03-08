@@ -1,13 +1,13 @@
 tagwrap
 ================
 
-Library similar to JSF composite API based on simple taghandlers.  Originaly the library was developed as abstraction library to support migration from Richfaces to Primefaces. 
-
-The main purpose of tagwrap library is making wrappers around JSF components in the manner of JSF composite components. Unlike the standard composite components it :
+Library similar to standard JSF composite API. Unlike the standard composite components it :
 <ul>
   <li>Doesn't create a new component node in JSF component tree</li>
   <li>Enables to wrap a non-component tag as the &lt;p:ajax&gt; converters</li>
 </ul>
+
+The main purpose of tagwrap library is making wrappers around JSF components in the manner of JSF composite components. Originaly the library was developed as abstraction library to support migration from Richfaces to Primefaces. 
 
 Tagwrap library defines 4 tags corresponding to composite tags:
 
@@ -17,7 +17,6 @@ Tagwrap library defines 4 tags corresponding to composite tags:
   <li><b>&lt;tgw:attribute&gt;</b> ~ &lt;composite:attribute&gt;</li>
   <li><b>&lt;tgw:implementation&gt;</b> ~ &lt;composite:implementation&gt;</li>
 </ul>
-
 
 Simple example:
 
@@ -34,18 +33,18 @@ Simple example:
 &lt;/ui:composition&gt;
 </code></pre>
 
-Then following
+Using the following fragment on JSF page:
 
 <pre><code>
   <xy:outputText/>
 </code></pre>
 
-Will show "Hello world!". 
+will show "Hello world!". 
 
-Library maps all declared atributte(tag parameters) from <b>interface</b> block to variables in <b>implementation</b> block using prefix "__" for variable names. Original attribute names are hidden in the implementation section. It guaratees that any tag parameter is propagated to children components (that is big problem in standard JSF facelets components).
 
-Advanced example:
+As can be seen in the example the library maps all declared atributtes(tag parameters) from <b>interface</b> block to variables in <b>implementation</b> block using prefix "__" for variable names. Original attribute names are hidden in the implementation section. It guaratees that no parameter is propagated to children components (that is big problem in standard JSF facelets components).
 
+More advanced example:
 
 <pre><code>
 &lt;ui:composition&gt;
@@ -79,7 +78,6 @@ Advanced example:
   &lt;/tgw:compositeComponent&gt;
 &lt;/ui:composition&gt;
 </code></pre>
-
 
 
 2.Other handlers:
