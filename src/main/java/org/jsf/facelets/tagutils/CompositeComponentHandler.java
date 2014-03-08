@@ -10,7 +10,7 @@ import javax.faces.view.facelets.TagConfig;
 import com.sun.faces.facelets.tag.TagHandlerImpl;
 
 /**
- * The Class CompositeComponentHandler. Handler for tag <tgu:compositeComponent>
+ * The Class CompositeComponentHandler. Handler for tag <x:compositeComponent>
  */
 public class CompositeComponentHandler extends TagHandlerImpl
 {
