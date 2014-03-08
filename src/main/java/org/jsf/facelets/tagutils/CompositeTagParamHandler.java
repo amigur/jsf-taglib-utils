@@ -18,7 +18,7 @@ import org.omnifaces.el.MethodExpressionValueExpressionAdapter;
 import com.sun.faces.facelets.tag.TagHandlerImpl;
 
 /**
- * The Class TagParamHandler. Hadler for <tgu:tagParam>
+ * The Class TagParamHandler. Hadler for <tx:tagParam>
  */
 public class CompositeTagParamHandler extends TagHandlerImpl
 {
