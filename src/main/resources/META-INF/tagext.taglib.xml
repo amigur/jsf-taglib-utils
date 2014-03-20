@@ -4,18 +4,18 @@
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/web-facelettaglibrary_2_0.xsd"
 		version="2.0">
-	<namespace>http://jsf.tagutils.org/taglib</namespace>
+	<namespace>http://jsf.tagext.org/taglib</namespace>
 	<!-- tx:compositeComponent --> 
 	<tag>
 			<tag-name>compositeComponent</tag-name>
-			<handler-class>org.jsf.facelets.tagutils.CompositeComponentHandler</handler-class>
+			<handler-class>org.jsf.facelets.tagext.CompositeComponentHandler</handler-class>
 	</tag>
 
 	<!-- tx:eval -->
 	<tag>
 			<description>Evaluates expression in the tag handler</description>
 			<tag-name>eval</tag-name>
-			<handler-class>org.jsf.facelets.tagutils.EvalHandler</handler-class>
+			<handler-class>org.jsf.facelets.tagext.EvalHandler</handler-class>
 			<attribute>
 					<description></description>
 					<name>expression</name>
@@ -27,7 +27,7 @@
 	<!-- tx:ifExist -->
 	<tag>
 			<tag-name>ifExist</tag-name>
-			<handler-class>org.jsf.facelets.tagutils.IfExistHandler</handler-class>
+			<handler-class>org.jsf.facelets.tagext.IfExistHandler</handler-class>
 			<attribute>
 					<description></description>
 					<name>value</name>
@@ -39,20 +39,20 @@
 	<!-- tx:implementation -->
 	<tag>
 			<tag-name>implementation</tag-name>
-			<handler-class>org.jsf.facelets.tagutils.CompositeImplementationHandler</handler-class>
+			<handler-class>org.jsf.facelets.tagext.CompositeImplementationHandler</handler-class>
 	</tag>
 
 	<!-- tx:interface -->
 	<tag>
 			<tag-name>interface</tag-name>
-			<handler-class>org.jsf.facelets.tagutils.CompositeInterfaceHandler</handler-class>
+			<handler-class>org.jsf.facelets.tagext.CompositeInterfaceHandler</handler-class>
 	</tag>
 
 	<!-- tx:setVarValue -->
 	<tag>
 			<description>Set evaluates value of value expression and assigns it immediately to the appropriate variable</description>
 			<tag-name>setVarValue</tag-name>
-			<handler-class>org.jsf.facelets.tagutils.SetVarValueHandler</handler-class>
+			<handler-class>org.jsf.facelets.tagext.SetVarValueHandler</handler-class>
 			<attribute>
 					<description></description>
 					<name>var</name>
@@ -70,7 +70,7 @@
 	<!-- tx:tagParam -->
 	<tag>
 			<tag-name>tagParam</tag-name>
-			<handler-class>org.jsf.facelets.tagutils.CompositeTagParamHandler</handler-class>
+			<handler-class>org.jsf.facelets.tagext.CompositeTagParamHandler</handler-class>
 			<attribute>
 					<description></description>
 					<name>name</name>

@@ -1,4 +1,4 @@
-package org.jsf.facelets.tagutils;
+package org.jsf.facelets.tagext;
 
 import java.io.IOException;
 
@@ -10,24 +10,21 @@ import javax.faces.view.facelets.TagConfig;
 
 import com.sun.faces.facelets.tag.TagHandlerImpl;
 
-public class SetVarValueHandler extends TagHandlerImpl
+public class EvalHandler extends TagHandlerImpl
 {
-	private final TagAttribute var;
-	private final TagAttribute value;
+	private final TagAttribute expression;
 
-	public SetVarValueHandler(TagConfig config)
+	public EvalHandler(TagConfig config)
 	{
 		super(config);
-		this.var = getRequiredAttribute("var");
-		this.value = getAttribute("value");
+		this.expression = getRequiredAttribute("expression");
 	}
 
 	@Override
 	public void apply(FaceletContext ctx, UIComponent parent) throws IOException
 	{
-		ValueExpression valueExpression = value.getValueExpression(ctx, Object.class);
-		Object valueValue = valueExpression.getValue(ctx);
-		ctx.setAttribute(var.getValue(), valueValue);
+		ValueExpression valueExpression = expression.getValueExpression(ctx, Object.class);
+		valueExpression.getValue(ctx);
 	}
 
 	/**

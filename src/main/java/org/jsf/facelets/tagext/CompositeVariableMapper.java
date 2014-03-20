@@ -1,4 +1,4 @@
-package org.jsf.facelets.tagutils;
+package org.jsf.facelets.tagext;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -30,9 +30,6 @@ public class CompositeVariableMapper extends VariableMapper
 		this.hiddeParamMap = new HashSet<>();
 	}
 
-	/* (non-Javadoc)
-	 * @see javax.el.VariableMapper#resolveVariable(java.lang.String)
-	 */
 	@Override
 	public ValueExpression resolveVariable(String variable)
 	{
@@ -50,9 +47,6 @@ public class CompositeVariableMapper extends VariableMapper
 
 	}
 
-	/* (non-Javadoc)
-	 * @see javax.el.VariableMapper#setVariable(java.lang.String, javax.el.ValueExpression)
-	 */
 	@Override
 	public ValueExpression setVariable(String variable, ValueExpression expression)
 	{

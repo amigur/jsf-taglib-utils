@@ -1,4 +1,4 @@
-package org.jsf.facelets.tagutils;
+package org.jsf.facelets.tagext;
 
 import java.io.IOException;
 
@@ -31,12 +31,6 @@ public class IfExistHandler extends TagHandler
 		this.value = this.getAttribute("value");
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.sun.facelets.FaceletHandler#apply(com.sun.facelets.FaceletContext,
-	 * javax.faces.component.UIComponent)
-	 */
 	@Override
 	public void apply(FaceletContext ctx, UIComponent parent) throws IOException, FacesException, FaceletException, ELException
 	{
