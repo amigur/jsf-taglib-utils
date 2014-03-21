@@ -22,14 +22,14 @@ Simple example of custom <my:outputText> definition :
 
 <pre><code>
 &lt;ui:composition&gt;
-  &lt;tgx:compositeComponent&gt;
-    &lt;tgx:interface&gt;
-      &lt;tgx:attribute name="value" default="Hello world!"/&gt;
-    &lt;/tgx:interface&gt;
-    &lt;tgx:implementation&gt;
+  &lt;tx:compositeComponent&gt;
+    &lt;tx:interface&gt;
+      &lt;tx:attribute name="value" default="Hello world!"/&gt;
+    &lt;/tx:interface&gt;
+    &lt;tx:implementation&gt;
       &lt;h:outputValue  value="#{__value}"/&gt;
-    &lt;/tgx:implementation&gt;
-  &lt;/tgx:compositeComponent&gt;
+    &lt;/tx:implementation&gt;
+  &lt;/tx:compositeComponent&gt;
 &lt;/ui:composition&gt;
 </code></pre>
 
@@ -82,7 +82,7 @@ More advanced example:
 
 2.Other handlers:
 <ul>
-  <li><b>&lt;tgw:ifExist var="xyz"&gt;</b></li> checks if variable is defined. It is similar to &lt;c:if test="#{!empty xyz}&gt; that checks the emptiness of varyable "xyz".
-  <li><b>&lt;tgw:eval&gt; expression="#{value_expression}"</b></li> Evaluates specified value expression.
-  <li><b>&lt;tgw:setVar&gt;</b></li>
+  <li><b>&lt;tx:ifExist var="xyz"&gt;</b></li> checks if variable is defined. It is similar to &lt;c:if test="#{!empty xyz}&gt; that checks the emptiness of varyable "xyz".
+  <li><b>&lt;tx:eval&gt; expression="#{value_expression}"</b></li> Evaluates specified value expression.
+  <li><b>&lt;tx:setVar&gt;</b></li>
 </ul>
