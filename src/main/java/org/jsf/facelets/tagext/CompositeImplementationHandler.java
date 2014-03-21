@@ -1,4 +1,4 @@
-package org.jsf.facelets.tagutils;
+package org.jsf.facelets.tagext;
 
 import java.io.IOException;
 
@@ -9,24 +9,20 @@ import javax.faces.view.facelets.TagConfig;
 import com.sun.faces.facelets.tag.TagHandlerImpl;
 
 /**
- * The Class CompositeInterfaceHandler. <tx:interface>
+ * The Class CompositeImplementationHandler. <tx:implementation>
  */
-public class CompositeInterfaceHandler extends TagHandlerImpl
+public class CompositeImplementationHandler extends TagHandlerImpl
 {
-	
 	/**
-	 * Instantiates a new interface handler.
+	 * Instantiates a new implementation handler.
 	 *
 	 * @param config the config
 	 */
-	public CompositeInterfaceHandler(TagConfig config)
+	public CompositeImplementationHandler(TagConfig config)
 	{
 		super(config);
 	}
 
-	/* (non-Javadoc)
-	 * @see javax.faces.view.facelets.FaceletHandler#apply(javax.faces.view.facelets.FaceletContext, javax.faces.component.UIComponent)
-	 */
 	@Override
 	public void apply(FaceletContext ctx, UIComponent parent) throws IOException
 	{
