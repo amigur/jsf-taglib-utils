@@ -47,7 +47,6 @@ Tagext maps all declared atributtes(tag parameters) from the <b>interface</b> bl
 More advanced example:
 
 ```xml
-<pre><code>
 <ui:composition>
   <tg:compositeComponent>
     <tx:interface>
