@@ -21,24 +21,24 @@ Tagwrap library defines 4 tags corresponding to composite tags:
 
 Simple example of custom <my:outputText> definition :
 
-<pre><code>
-&lt;ui:composition&gt;
-  &lt;tx:compositeComponent&gt;
-    &lt;tx:interface&gt;
-      &lt;tx:attribute name="value" default="Hello world!"/&gt;
-    &lt;/tx:interface&gt;
-    &lt;tx:implementation&gt;
-      &lt;h:outputValue  value="#{__value}"/&gt;
-    &lt;/tx:implementation&gt;
-  &lt;/tx:compositeComponent&gt;
-&lt;/ui:composition&gt;
-</code></pre>
+```xml
+<ui:composition>
+  <tx:compositeComponent>
+    <tx:interface>
+      <tx:attribute name="value" default="Hello world!"/>
+    </tx:interface>
+    <tx:implementation>
+      <h:outputValue  value="#{__value}"/>
+    </tx:implementation>
+  </tx:compositeComponent>
+</ui:composition>
+```
 
 Following fragment from JSF page:
 
-<pre><code>
-  &lt;my:outputText/&gt;
-</code></pre>
+```xml
+  <my:outputText/>;
+```
 
 shows "Hello world!" text. 
 
@@ -46,39 +46,39 @@ Tagext maps all declared atributtes(tag parameters) from the <b>interface</b> bl
 
 More advanced example:
 
+```xml
 <pre><code>
-&lt;ui:composition&gt;
-  &lt;tg:compositeComponent&gt;
-    &lt;tx:interface&gt;
-      &lt;tx:attribute name="action" isMethodParam="true"/&gt;
-      &lt;tx:attribute name="actionListener"/&gt;
-      &lt;tx:attribute name="id" required="true"/&gt;
-      &lt;tx:attribute name="event"/&gt;
-      &lt;tx:attribute name="update"/&gt;
-      &lt;tx:attribute name="rendered" default="true"/&gt;
-      &lt;tx:attribute name="style"/&gt;
-      &lt;tx:attribute name="value"/&gt;
-    &lt;/tx:interface&gt;
-    &lt;tx:implementation&gt;
-      &lt;p:commandLink  id="#{__id}"
+<ui:composition>
+  <tg:compositeComponent>
+    <tx:interface>
+      <tx:attribute name="action" isMethodParam="true"/>
+      <tx:attribute name="actionListener"/>
+      <tx:attribute name="id" required="true"/>
+      <tx:attribute name="event"/>
+      <tx:attribute name="update"/>
+      <tx:attribute name="rendered" default="true"/>
+      <tx:attribute name="style"/>
+      <tx:attribute name="value"/>
+    </tx:interface>
+    <tx:implementation>
+      <p:commandLink  id="#{__id}"
                  action="#{:invokeTagMethodExpression(__action)}"
                  update="#{__update}"
                  rendered="#{__rendered}"
                  style="#{__style}"
-                 value="#{__value}"&gt;
-        &lt;tx:ifExist value="__event"&gt;
-          &lt;f:attribute name="event" value="#{__event}"/&gt;
-        &lt;/tx:ifExist&gt;
-        &lt;tx:ifExist value="__actionListener"&gt;
-          &lt;f:attribute name="actionListener" value="#{__actionListener}"/&gt;
-        &lt;/tx:ifExist&gt;
-        &lt;ui:insert/&gt;
-      &lt;/p:commandLink&gt;
-    &lt;/tx:implementation&gt;
-  &lt;/tx:compositeComponent&gt;
-&lt;/ui:composition&gt;
-</code></pre>
-
+                 value="#{__value}">
+        <tx:ifExist value="__event">
+          <f:attribute name="event" value="#{__event}"/>
+        </tx:ifExist>
+        <tx:ifExist value="__actionListener">
+          <f:attribute name="actionListener" value="#{__actionListener}"/>
+        </tx:ifExist>
+        <ui:insert/>
+      </p:commandLink>
+    </tx:implementation>
+  </tx:compositeComponent>
+</ui:composition>
+```
 
 2.Another handlers:
 <ul>
